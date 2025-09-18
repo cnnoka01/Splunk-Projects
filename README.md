@@ -93,3 +93,5 @@ Each report was then added to a dashboard named ***WebSvrProject_Dashboard_Opera
 
 The final dashboard can be seen below 😁
 ![Dashboard](Screenshot_OperationsDashboard.png)
+
+This project is a starting point, and I'm excited to continue adding more advanced queries as I improve my skills in Splunk.
