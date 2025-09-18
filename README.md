@@ -86,4 +86,10 @@ index=web sourcetype="access_combined"
 
 ![LocationMap](Screenshot_Search_VisitorLocationMap.png)
 # Step 3: Creating Reports and Dashboards
-All the searches executed in Step 2 were first saved as reports using the recommended naming convention for Splunk (<GroupName>_<ObjectType>_<Description>)
+All the searches executed in **Step 2** were first saved as reports using the recommended naming convention for Splunk (<GroupName>_<ObjectType>_<Description>) as seen in the screenshot captured from my local instance
+![ReportsList](Screenshot_Search_ReportsList.png)
+Each report was then added to a dashboard named ***WebSvrProject_Dashboard_Operations*** that i created. I rearranged and renamed the tiles. Each tile's drilldown editore was was set to **"Link to Search"** to make them more interactive for whoever is granted access to view the dashboard. 
+![DrilldownEditor](Screenshot_DrilldownEditor.png)
+
+The final dashboard can be seen below 😁
+![Dashboard](Screenshot_OperationsDashboard.png)
