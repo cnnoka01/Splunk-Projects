@@ -1,6 +1,6 @@
 # Web Server Operations Dashboard
 
-Welcome! The goal of this project is to build a Web Operations Dashboard that gives an overview of the servers' activity while demonstrating SPL skills, from simple searches to creating rich visualizations.
+Welcome! The goal of this project was to build a Web Operations Dashboard that gives an overview of the servers' activity while demonstrating SPL skills, from simple searches to creating rich visualizations.
 
 ---
 # Step 1: Importing the data into my local Splunk instance.
