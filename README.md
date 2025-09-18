@@ -72,3 +72,4 @@ index=web sourcetype="access_combined"
 - `| iplocation clientip`: This command enriches our data by looking up each clientip or visitor and adding geographic information (like country, city, and coordinates) to each event.
 - `| geostats count by Country`: This command creates a map that shows the number of requests originating from each country. This could provide insight into the global reach reach of the web servers.
 # Step 3: Creating Reports and Dashboards
+All the searches executed in Step 2 were first saved as reports using the recommended naming convention for Splunk (<GroupName>_<ObjectType>_<Description>)
