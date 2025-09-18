@@ -13,7 +13,7 @@ A foundational query that calculates the total number of web requests. This is p
 index=web sourcetype="access_combined"
 | stats count as "Total Requests"
 ```
-- `index=web sourcetype="access_combined"`: This is the starting point. It tells Splunk to search for all events from our web access logs.
+- `index=web sourcetype="access_combined"`: This is the starting point. It tells Splunk to search for all events from the web access logs.
 - `| stats count as "Total Requests"`: This command counts all the events and gives the final number a clean, readable name: "Total Requests".
 
 ![TotalRequestScreenshot](Screenshot_Search_TotalRequests.png)
@@ -43,7 +43,7 @@ index=web sourcetype="access_combined"
 
 ![HTTPCodeScreenshot](Screenshot_Search_HTTPCodeBreakdown.png)
 ## Query 4: Top 10 Pages
-This query help identify the most frequently accessed contents on our web server.
+This query help identify the most frequently accessed contents on the web servers.
 ```splunk-spl
 index=web sourcetype="access_combined"
 | top limit=10 uri_path
@@ -81,13 +81,13 @@ index=web sourcetype="access_combined"
 | iplocation clientip
 | geostats count by Country
 ```
-- `| iplocation clientip`: This command enriches our data by looking up each clientip or visitor and adding geographic information (like country, city, and coordinates) to each event.
+- `| iplocation clientip`: This command enriches the data by looking up each clientip or visitor and adding geographic information (like country, city, and coordinates) to each event.
 - `| geostats count by Country`: This command creates a map that shows the number of requests originating from each country. This could provide insight into the global reach reach of the web servers.
 
 ![LocationMap](Screenshot_Search_VisitorLocationMap.png)
 # Step 3: Creating Reports and Dashboards
 All the searches executed in **Step 2** were first saved as reports using the recommended naming convention for Splunk (<GroupName>_<ObjectType>_<Description>) as seen in the screenshot captured from my local instance
-![ReportsList](Screenshot_Search_ReportsList.png)
+![ReportsList](Screenshot_ReportsList.png)
 Each report was then added to a dashboard named ***WebSvrProject_Dashboard_Operations*** that i created. I rearranged and renamed the tiles. Each tile's drilldown editore was was set to **"Link to Search"** to make them more interactive for whoever is granted access to view the dashboard. 
 ![DrilldownEditor](Screenshot_DrilldownEditor.png)
 
