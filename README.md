@@ -32,7 +32,7 @@ index=web sourcetype="access_combined"
 
 ![RequestsOverTimeScreenshot](Screenshot_Search_RequestsOverTime.png)
 ## Query 3: HTTP Status Code Breakdown
-Raw status codes like 404 or 200 are just numbers. In order to give the codes more meaningful descriptions and make the analysis clearer and more presentable for whoever views the dashboard, i utilized a **lookup table** named ***responseCode_Mapping.csv***. This table was imported into my local instance and a matching lookup definition was created as well.
+Raw status codes like 404 or 200 are just numbers. In order to give the codes more meaningful descriptions and make the analysis clearer and more presentable for whoever views the dashboard, I utilized a **lookup table** named ***responseCode_Mapping.csv***. This table was imported into my local instance and a matching lookup definition was created as well.
 ```splunk-spl
 index=web sourcetype="access_combined"
 | stats count by status
@@ -75,7 +75,7 @@ index=web sourcetype="access_combined" status=404
 
 ![404Error](Screenshot_Search_404Errors.png)
 ## Query 7: Mapping Visitor Locations
-Finally, i wanted to show how raw IP addresses is transformed into geographical data for visualization.
+Finally, I wanted to show how raw IP addresses is transformed into geographical data for visualization.
 ```splunk-spl
 index=web sourcetype="access_combined"
 | iplocation clientip
@@ -88,10 +88,10 @@ index=web sourcetype="access_combined"
 # Step 3: Creating Reports and Dashboards
 All the searches executed in **Step 2** were first saved as reports using the recommended naming convention for Splunk (<GroupName>_<ObjectType>_<Description>) as seen in the screenshot captured from my local instance
 ![ReportsList](Screenshot_ReportsList.png)
-Each report was then added to a dashboard named ***WebSvrProject_Dashboard_Operations*** that i created. I rearranged and renamed the tiles. Each tile's drilldown editore was was set to **"Link to Search"** to make them more interactive for whoever is granted access to view the dashboard. 
+Each report was then added to a dashboard named ***WebSvrProject_Dashboard_Operations*** that I created. I rearranged and renamed the tiles. Each tile's drilldown editore was was set to **"Link to Search"** to make them more interactive for whoever is granted access to view the dashboard. 
 ![DrilldownEditor](Screenshot_DrilldownEditor.png)
 
-The final dashboard can be seen below 😁
+The final dashboard can be seen below 😁 This can be emailed, exported or made available to other user profiles on the Splunk instance who need to access it for operational reasons.
 ![Dashboard](Screenshot_OperationsDashboard.png)
 
-This project is a starting point, and I'm excited to continue adding more advanced queries as I improve my skills in Splunk.
+This project is a starting point, and I'm excited to continue adding more advanced queries as I improve my skills in Splunk. Thank you for reading and please feel free to leave comments/suggestions on how i can improve this project or even project ideas i couple explore in the future! 😊
